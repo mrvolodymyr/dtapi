@@ -17,9 +17,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         HTTPService().getSpeciality(){ (speciality: [Speciality]) in
             self.specialityArray = speciality
-            DispatchQueue.main.async {
-                self.tableViewController.reloadData()
-            }
+//            DispatchQueue.main.async {
+//                self.tableViewController.reloadData()
+//            }
         }
     }
 

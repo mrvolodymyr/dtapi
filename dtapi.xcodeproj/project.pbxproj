@@ -19,6 +19,7 @@
 		2D5C56111F8CCE2500CD84B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C56101F8CCE2500CD84B9 /* MainViewController.swift */; };
 		2DFDCEF21F98C70300593FD3 /* SpecialityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDCEF11F98C70300593FD3 /* SpecialityData.swift */; };
 		2DFED4B81F97603900B1DBDA /* SpecialityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFED4B71F97603900B1DBDA /* SpecialityTableViewCell.swift */; };
+		3F50EE8A1F9904E300ACBA8A /* CreateSpecialityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50EE891F9904E300ACBA8A /* CreateSpecialityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2D5C56101F8CCE2500CD84B9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2DFDCEF11F98C70300593FD3 /* SpecialityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialityData.swift; sourceTree = "<group>"; };
 		2DFED4B71F97603900B1DBDA /* SpecialityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialityTableViewCell.swift; sourceTree = "<group>"; };
+		3F50EE891F9904E300ACBA8A /* CreateSpecialityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSpecialityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +109,8 @@
 		2D5C55E01F8CC01800CD84B9 /* dtapi */ = {
 			isa = PBXGroup;
 			children = (
+				3F50EE881F9904A600ACBA8A /* Controllers */,
 				2D5C55E51F8CC01800CD84B9 /* Main.storyboard */,
-				2D5C55E31F8CC01800CD84B9 /* ViewController.swift */,
-				2D5C56101F8CCE2500CD84B9 /* MainViewController.swift */,
 				2DFED4B71F97603900B1DBDA /* SpecialityTableViewCell.swift */,
 				2D0CBC261F9613B80021240A /* Specialityes.swift */,
 				2D22ABCD1F9895E20094375B /* HTTPService.swift */,
@@ -146,6 +147,16 @@
 				2D5C55ED1F8CC01800CD84B9 /* Info.plist */,
 			);
 			name = "New Group";
+			sourceTree = "<group>";
+		};
+		3F50EE881F9904A600ACBA8A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C55E31F8CC01800CD84B9 /* ViewController.swift */,
+				2D5C56101F8CCE2500CD84B9 /* MainViewController.swift */,
+				3F50EE891F9904E300ACBA8A /* CreateSpecialityViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D5C56111F8CCE2500CD84B9 /* MainViewController.swift in Sources */,
+				3F50EE8A1F9904E300ACBA8A /* CreateSpecialityViewController.swift in Sources */,
 				2D0CBC271F9613B80021240A /* Specialityes.swift in Sources */,
 				2DFED4B81F97603900B1DBDA /* SpecialityTableViewCell.swift in Sources */,
 				2D22ABCE1F9895E20094375B /* HTTPService.swift in Sources */,

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0CBC271F9613B80021240A /* Specialityes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CBC261F9613B80021240A /* Specialityes.swift */; };
+		2D22ABCE1F9895E20094375B /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22ABCD1F9895E20094375B /* HTTPService.swift */; };
 		2D5C55E21F8CC01800CD84B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C55E11F8CC01800CD84B9 /* AppDelegate.swift */; };
 		2D5C55E41F8CC01800CD84B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C55E31F8CC01800CD84B9 /* ViewController.swift */; };
 		2D5C55E71F8CC01800CD84B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5C55E51F8CC01800CD84B9 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 		2D5C55F71F8CC01800CD84B9 /* dtapiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C55F61F8CC01800CD84B9 /* dtapiTests.swift */; };
 		2D5C56021F8CC01800CD84B9 /* dtapiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C56011F8CC01800CD84B9 /* dtapiUITests.swift */; };
 		2D5C56111F8CCE2500CD84B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C56101F8CCE2500CD84B9 /* MainViewController.swift */; };
+		2DFDCEF21F98C70300593FD3 /* SpecialityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFDCEF11F98C70300593FD3 /* SpecialityData.swift */; };
+		2DFED4B81F97603900B1DBDA /* SpecialityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFED4B71F97603900B1DBDA /* SpecialityTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D0CBC261F9613B80021240A /* Specialityes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specialityes.swift; sourceTree = "<group>"; };
+		2D22ABCD1F9895E20094375B /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
 		2D5C55DE1F8CC01800CD84B9 /* dtapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dtapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5C55E11F8CC01800CD84B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D5C55E31F8CC01800CD84B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +55,8 @@
 		2D5C56011F8CC01800CD84B9 /* dtapiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dtapiUITests.swift; sourceTree = "<group>"; };
 		2D5C56031F8CC01800CD84B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D5C56101F8CCE2500CD84B9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2DFDCEF11F98C70300593FD3 /* SpecialityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialityData.swift; sourceTree = "<group>"; };
+		2DFED4B71F97603900B1DBDA /* SpecialityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialityTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,13 @@
 		2D5C55E01F8CC01800CD84B9 /* dtapi */ = {
 			isa = PBXGroup;
 			children = (
+				2D5C55E51F8CC01800CD84B9 /* Main.storyboard */,
 				2D5C55E31F8CC01800CD84B9 /* ViewController.swift */,
 				2D5C56101F8CCE2500CD84B9 /* MainViewController.swift */,
-				2D5C55E51F8CC01800CD84B9 /* Main.storyboard */,
+				2DFED4B71F97603900B1DBDA /* SpecialityTableViewCell.swift */,
+				2D0CBC261F9613B80021240A /* Specialityes.swift */,
+				2D22ABCD1F9895E20094375B /* HTTPService.swift */,
+				2DFDCEF11F98C70300593FD3 /* SpecialityData.swift */,
 				2D5C55E81F8CC01800CD84B9 /* Assets.xcassets */,
 				2D5C560F1F8CC03B00CD84B9 /* New Group */,
 			);
@@ -271,6 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D5C56111F8CCE2500CD84B9 /* MainViewController.swift in Sources */,
+				2D0CBC271F9613B80021240A /* Specialityes.swift in Sources */,
+				2DFED4B81F97603900B1DBDA /* SpecialityTableViewCell.swift in Sources */,
+				2D22ABCE1F9895E20094375B /* HTTPService.swift in Sources */,
+				2DFDCEF21F98C70300593FD3 /* SpecialityData.swift in Sources */,
 				2D5C55E41F8CC01800CD84B9 /* ViewController.swift in Sources */,
 				2D5C55E21F8CC01800CD84B9 /* AppDelegate.swift in Sources */,
 			);

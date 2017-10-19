@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "140BBED999690E1C5943B84C5D6CDE1A33B28F3D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "140BBED999690E1C5943B84C5D6CDE1A33B28F3D" : 9223372036854775807,
+    "7610CC74725BFCBF8B8661BE61B7E0D7FE085DAF" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C5B62373-2A87-43E0-BB2A-6E8106B50E24",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "140BBED999690E1C5943B84C5D6CDE1A33B28F3D" : "dtapi\/",
+    "7610CC74725BFCBF8B8661BE61B7E0D7FE085DAF" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "dtapi",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "dtapi.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mrvolodymyr\/dtapi.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "140BBED999690E1C5943B84C5D6CDE1A33B28F3D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mrsaros\/WhereIsMyMoney.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7610CC74725BFCBF8B8661BE61B7E0D7FE085DAF"
+    }
+  ]
+}

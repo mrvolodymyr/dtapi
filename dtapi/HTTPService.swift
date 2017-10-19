@@ -10,7 +10,7 @@ import Foundation
 
 class  HTTPService{
     
-    static func logIn(){
+    func logIn(completionHandler: @escaping (_ isLog: Bool) -> ()) {
         let requestBody = ["username": "admin", "password": "dtapi_admin"]
         guard let url = URL(string: "http://vps9615.hyperhost.name/login/index") else { return }
         
@@ -24,17 +24,20 @@ class  HTTPService{
         
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
-        if let response = response {
-            print(response)
-        }
-        guard let data = data else { return }
-        do {
-            let json = try JSONSerialization.jsonObject(with: data, options: [])
-            print(json)
-        }
-        catch{
-            print(error)
-        }
+            if let response = response {
+                print(response)
+            }
+            guard let data = data else { return }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+                DispatchQueue.main.sync {
+                    completionHandler(true)
+                }
+            }
+            catch{
+                print(error)
+            }
         }.resume()
     }
     
@@ -51,17 +54,14 @@ class  HTTPService{
             guard let data = data else { return }
             do {
                 let json = try JSONDecoder().decode([Speciality].self, from: data)
-                completionHandler(json)
-//                for index in json{
-//                    print(index)
-//                 SpecialityData.specialityData.specialityArray.append(index)
-//                }
-                print(json)
+                DispatchQueue.main.sync {
+                    completionHandler(json)
+                }
             }
             catch{
                 print("error")
             }
-            }.resume()
+        }.resume()
         
     }
     

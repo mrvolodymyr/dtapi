@@ -20,13 +20,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        HTTPService.logIn()
-        DispatchQueue.main.async {
-            guard let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else  {
-                return
+        
+//        DispatchQueue.main.sync {
+//            HTTPService.logIn()
+//
+//        }
+        HTTPService().logIn { (b) in
+            if b {
+                guard let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else  { return }
+                self.navigationController?.pushViewController(mainVC, animated: true)
+                
             }
-            self.navigationController?.pushViewController(mainVC, animated: true)
         }
+        
     }
 
 

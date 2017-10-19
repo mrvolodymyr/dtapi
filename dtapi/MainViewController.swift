@@ -17,9 +17,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         HTTPService().getSpeciality(){ (speciality: [Speciality]) in
             self.specialityArray = speciality
-//            DispatchQueue.main.async {
-//                self.tableViewController.reloadData()
-//            }
+                self.tableViewController.reloadData()
         }
     }
 
@@ -37,10 +35,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        if specialityArray.count < 0 {
-            print(specialityArray[0])
-        } else {
-            print("array is empty")
+        HTTPService().getSpeciality(){ (speciality: [Speciality]) in
+            self.specialityArray = speciality
+            self.tableViewController.reloadData()
         }
     }
 }

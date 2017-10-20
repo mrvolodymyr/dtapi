@@ -23,9 +23,7 @@ class CreateSpecialityViewController: UIViewController {
         let specialityNameText  = specialityNameTextField.text!
         
         HTTPService().createSpeciality(specialityCode: specialityCodeText, specialityName: specialityNameText)
-        
-        guard let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else  { return }
-        self.navigationController?.pushViewController(mainViewController, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

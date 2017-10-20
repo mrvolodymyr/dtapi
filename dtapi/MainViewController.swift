@@ -20,7 +20,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.tableViewController.reloadData()
         }
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return specialityArray.count
     }
@@ -40,7 +40,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 if deleted {
                     self.specialityArray.remove(at: indexPath.row)
                     tableView.deleteRows(at: [indexPath], with: .top)
-                    
                     self.tableViewController.reloadData()
                 }
             })

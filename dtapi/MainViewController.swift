@@ -15,12 +15,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        HTTPService().getSpeciality(){ (speciality: [Speciality]) in
+        HTTPService().getSpeciality(){ (speciality: [SpecialityModel.Speciality]) in
             self.specialityArray = speciality
-                self.tableViewController.reloadData()
+            self.tableViewController.reloadData()
         }
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return specialityArray.count
     }
@@ -34,10 +34,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-    @IBAction func buttonTapped(_ sender: Any) {
-        HTTPService().getSpeciality(){ (speciality: [Speciality]) in
-            self.specialityArray = speciality
-            self.tableViewController.reloadData()
-        }
+    @IBAction func createNewSpeciality(_ sender: Any) {
+        guard let createSpecialityViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreateSpecialityViewController") as? CreateSpecialityViewController else  { return }
+        self.navigationController?.pushViewController(createSpecialityViewController, animated: true)
     }
+    
 }
+

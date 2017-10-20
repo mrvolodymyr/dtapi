@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D0CBC271F9613B80021240A /* Specialityes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CBC261F9613B80021240A /* Specialityes.swift */; };
+		2D0CBC271F9613B80021240A /* SpecialityesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CBC261F9613B80021240A /* SpecialityesModel.swift */; };
 		2D22ABCE1F9895E20094375B /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22ABCD1F9895E20094375B /* HTTPService.swift */; };
 		2D5C55E21F8CC01800CD84B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C55E11F8CC01800CD84B9 /* AppDelegate.swift */; };
 		2D5C55E41F8CC01800CD84B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C55E31F8CC01800CD84B9 /* ViewController.swift */; };
@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D0CBC261F9613B80021240A /* Specialityes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specialityes.swift; sourceTree = "<group>"; };
+		2D0CBC261F9613B80021240A /* SpecialityesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialityesModel.swift; sourceTree = "<group>"; };
 		2D22ABCD1F9895E20094375B /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
 		2D5C55DE1F8CC01800CD84B9 /* dtapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dtapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5C55E11F8CC01800CD84B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				3F50EE881F9904A600ACBA8A /* Controllers */,
 				2D5C55E51F8CC01800CD84B9 /* Main.storyboard */,
 				2DFED4B71F97603900B1DBDA /* SpecialityTableViewCell.swift */,
-				2D0CBC261F9613B80021240A /* Specialityes.swift */,
+				2D0CBC261F9613B80021240A /* SpecialityesModel.swift */,
 				2D22ABCD1F9895E20094375B /* HTTPService.swift */,
 				2DFDCEF11F98C70300593FD3 /* SpecialityData.swift */,
 				2D5C55E81F8CC01800CD84B9 /* Assets.xcassets */,
@@ -295,7 +295,7 @@
 			files = (
 				2D5C56111F8CCE2500CD84B9 /* MainViewController.swift in Sources */,
 				3F50EE8A1F9904E300ACBA8A /* CreateSpecialityViewController.swift in Sources */,
-				2D0CBC271F9613B80021240A /* Specialityes.swift in Sources */,
+				2D0CBC271F9613B80021240A /* SpecialityesModel.swift in Sources */,
 				2DFED4B81F97603900B1DBDA /* SpecialityTableViewCell.swift in Sources */,
 				2D22ABCE1F9895E20094375B /* HTTPService.swift in Sources */,
 				2DFDCEF21F98C70300593FD3 /* SpecialityData.swift in Sources */,

@@ -12,6 +12,6 @@ class SpecialityData: NSObject {
     
     static let specialityData = SpecialityData()
     
-    var specialityArray: [Speciality] = []
+    var specialityArray: [SpecialityModel.Speciality] = []
     
 }

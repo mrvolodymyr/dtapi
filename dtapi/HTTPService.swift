@@ -92,7 +92,7 @@ class  HTTPService{
         
     }
     
-    func deleteteSpeciality(id: String, completionHandler: @escaping (_ success: Bool) -> ()) {
+    func deleteteSpeciality(id: String, completionHandler: @escaping (_ deleted: Bool) -> ()) {
         guard let url = URL(string: "http://vps9615.hyperhost.name/Speciality/del/" + id) else { return }
 
         var request = URLRequest(url: url)

@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -128,7 +128,7 @@
                     <navigationItem key="navigationItem" title="Title" id="yH7-Hw-6h6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="C1G-Qb-GyD">
                             <connections>
-                                <action selector="createNewSpeciality:" destination="BQv-Tc-6w2" id="80e-Lx-jvd"/>
+                                <action selector="createNewSpeciality:" destination="BQv-Tc-6w2" id="U9F-Ug-goJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -172,8 +172,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="CreateSpecialityButton:" destination="bcD-wE-cuN" eventType="touchUpInside" id="66F-iD-dgH"/>
-                                    <segue destination="BQv-Tc-6w2" kind="show" id="NfU-p5-kb3"/>
+                                    <action selector="CreateSpecialityButton:" destination="bcD-wE-cuN" eventType="touchUpInside" id="Znj-75-hMg"/>
                                 </connections>
                             </button>
                         </subviews>

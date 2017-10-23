@@ -24,6 +24,7 @@ class CreateSpecialityViewController: UIViewController {
         
         HTTPService().createSpeciality(specialityCode: specialityCodeText, specialityName: specialityNameText)
         self.navigationController?.popViewController(animated: true)
+
     }
     
 }

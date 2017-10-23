@@ -15,6 +15,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         HTTPService().getSpeciality(){ (speciality: [SpecialityModel.Speciality]) in
             self.specialityArray = speciality
             self.tableViewController.reloadData()

@@ -119,4 +119,32 @@ class  HTTPService{
         }.resume()
     }
     
+    func editSpeciality(id: String, completionHandler: @escaping (_ deleted: Bool) -> ()) {
+        guard let url = URL(string: "http://vps9615.hyperhost.name/Speciality/update/" + id) else { return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                print(error)
+            } else {
+                if let response = response as? HTTPURLResponse, let data = data{
+                    if response.statusCode == 200 {
+                        print(response, data)
+                        DispatchQueue.main.sync {
+                            completionHandler(true)
+                        }
+                    } else {
+                        print("status code: ", response.statusCode )
+                    }
+                    DispatchQueue.main.sync {
+                        completionHandler(false)
+                    }
+                }
+            }
+        }.resume()
+    }
+    
+    
 }

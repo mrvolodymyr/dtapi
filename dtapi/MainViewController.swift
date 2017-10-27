@@ -42,28 +42,36 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let edit = UITableViewRowAction(style: .normal, title: "Edit", handler: { action, indexPath in
             guard let createSpecialityViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreateSpecialityViewController") as? CreateSpecialityViewController else  { return }
             createSpecialityViewController.specialityInstance = self.specialities.specialityArray[indexPath.row]
+            createSpecialityViewController.canEdit = true
             self.navigationController?.pushViewController(createSpecialityViewController, animated: true)
         })
         let delete = UITableViewRowAction(style: .destructive, title: "Delete", handler: { action, indexPath in
-            if indexPath.row < self.specialities.specialityArray.count {
-                deleteteSpeciality(id: self.specialities.specialityArray[indexPath.row].speciality_id, completionHandler: { (deleted) in
-                    if deleted {
-                        self.specialities.specialityArray.remove(at: indexPath.row)
-                        tableView.deleteRows(at: [indexPath], with: .top)
-                        self.tableViewController.reloadData()
-                    }
-                })
-                
-            }
+            let alert = UIAlertController(title: "WARNING", message: "Do you want to delete this speciality?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+                if indexPath.row < self.specialities.specialityArray.count {
+                    deleteteSpeciality(id: self.specialities.specialityArray[indexPath.row].speciality_id, completionHandler: { (deleted) in
+                        if deleted {
+                            self.specialities.specialityArray.remove(at: indexPath.row)
+                            tableView.deleteRows(at: [indexPath], with: .top)
+                            self.tableViewController.reloadData()
+                        }
+                    })
+                }
+            }))
+            alert.addAction(UIAlertAction(title: "NO", style: .default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
         })
         return [edit, delete]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let index = specialities.specialityArray[indexPath.row]
-        print(index.speciality_id)
-        print(index.speciality_code)
-        print(index.speciality_name)
+//        let index = specialities.specialityArray[indexPath.row]
+//        print(index.speciality_id)
+//        print(index.speciality_code)
+//        print(index.speciality_name)
     }
     
     @IBAction func createNewSpeciality(_ sender: Any) {

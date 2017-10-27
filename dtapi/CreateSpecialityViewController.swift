@@ -13,7 +13,9 @@ class CreateSpecialityViewController: UIViewController {
     @IBOutlet weak var specialityCodeTextField: UITextField!
     @IBOutlet weak var specialityNameTextField: UITextField!
     @IBOutlet weak var createButton: UIButton!
-    
+    var canEdit = Bool()
+    var id = String()
+    	
     var speciality = SpecialityData.specialityData
     var specialityInstance: SpecialityModel.Speciality? {
         didSet {
@@ -21,13 +23,20 @@ class CreateSpecialityViewController: UIViewController {
             self.title = "Editing"
             specialityNameTextField.text = specialityInstance?.speciality_name
             specialityCodeTextField.text = specialityInstance?.speciality_code
-            createButton.titleLabel?.text = "Save"
+            if canEdit {
+                createButton.titleLabel?.text = "Save"
+                id = specialityInstance!.speciality_id
+                print(id)
+            } else {
+                print("No id")
+            }
+            
+            
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func CreateSpecialityButton(_ sender: Any) {

@@ -31,7 +31,7 @@ class CreateSpecialityViewController: UIViewController {
     }
     
     @IBAction func CreateSpecialityButton(_ sender: Any) {
-        HTTPService().createSpeciality(specialityCode: specialityCodeTextField.text!, specialityName: specialityNameTextField.text!)
+        createSpeciality(specialityCode: specialityCodeTextField.text!, specialityName: specialityNameTextField.text!)
         self.navigationController?.popViewController(animated: true)
     }
         

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        HTTPService().logIn { (boolenVariable) in
+        logIn { (boolenVariable) in
             if boolenVariable {
                 guard let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController") as? MainViewController else  { return }
                 self.navigationController?.pushViewController(mainViewController, animated: true)

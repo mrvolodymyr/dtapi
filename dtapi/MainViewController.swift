@@ -16,7 +16,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        HTTPService().getSpeciality(){ (speciality: [SpecialityModel.Speciality]) in
+        getSpeciality(){ (speciality: [SpecialityModel.Speciality]) in
             SpecialityData.specialityData.specialityArray = speciality
         }
     }
@@ -46,7 +46,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         })
         let delete = UITableViewRowAction(style: .destructive, title: "Delete", handler: { action, indexPath in
             if indexPath.row < self.specialities.specialityArray.count {
-                HTTPService().deleteteSpeciality(id: self.specialities.specialityArray[indexPath.row].speciality_id, completionHandler: { (deleted) in
+                deleteteSpeciality(id: self.specialities.specialityArray[indexPath.row].speciality_id, completionHandler: { (deleted) in
                     if deleted {
                         self.specialities.specialityArray.remove(at: indexPath.row)
                         tableView.deleteRows(at: [indexPath], with: .top)
@@ -57,6 +57,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         })
         return [edit, delete]
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let index = specialities.specialityArray[indexPath.row]
+        print(index.speciality_id)
+        print(index.speciality_code)
+        print(index.speciality_name)
     }
     
     @IBAction func createNewSpeciality(_ sender: Any) {

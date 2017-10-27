@@ -38,24 +38,25 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if indexPath.row < specialities.specialityArray.count {
-            HTTPService().deleteteSpeciality(id: specialities.specialityArray[indexPath.row].speciality_id, completionHandler: { (deleted) in
-                if deleted {
-                    self.specialities.specialityArray.remove(at: indexPath.row)
-                    tableView.deleteRows(at: [indexPath], with: .top)
-                    self.tableViewController.reloadData()
-                }
-            })
-            
-        }
-    }
-    
-    // editing
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let createSpecialityViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreateSpecialityViewController") as? CreateSpecialityViewController else  { return }
-        createSpecialityViewController.specialityInstance = specialities.specialityArray[indexPath.row]
-        self.navigationController?.pushViewController(createSpecialityViewController, animated: true)
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let edit = UITableViewRowAction(style: .normal, title: "Edit", handler: { action, indexPath in
+            guard let createSpecialityViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreateSpecialityViewController") as? CreateSpecialityViewController else  { return }
+            createSpecialityViewController.specialityInstance = self.specialities.specialityArray[indexPath.row]
+            self.navigationController?.pushViewController(createSpecialityViewController, animated: true)
+        })
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete", handler: { action, indexPath in
+            if indexPath.row < self.specialities.specialityArray.count {
+                HTTPService().deleteteSpeciality(id: self.specialities.specialityArray[indexPath.row].speciality_id, completionHandler: { (deleted) in
+                    if deleted {
+                        self.specialities.specialityArray.remove(at: indexPath.row)
+                        tableView.deleteRows(at: [indexPath], with: .top)
+                        self.tableViewController.reloadData()
+                    }
+                })
+                
+            }
+        })
+        return [edit, delete]
     }
     
     @IBAction func createNewSpeciality(_ sender: Any) {

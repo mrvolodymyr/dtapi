@@ -10,19 +10,25 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    @IBOutlet weak var tableViewController: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var specialities = SpecialityData.specialityData
+    var refresh: UIRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getSpeciality(){ (speciality: [SpecialityModel.Speciality]) in
-            SpecialityData.specialityData.specialityArray = speciality
-        }
+        refreshData()
+        refresh.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        tableView.refreshControl = refresh
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.tableViewController.reloadData()
+    @objc func refreshData(){
+        self.refresh.beginRefreshing()
+        getSpeciality(){ (speciality: [SpecialityModel.Speciality]) in
+            SpecialityData.specialityData.specialityArray = speciality
+        self.tableView.reloadData()
+        }
+        self.refresh.endRefreshing()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,7 +60,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         if deleted {
                             self.specialities.specialityArray.remove(at: indexPath.row)
                             tableView.deleteRows(at: [indexPath], with: .top)
-                            self.tableViewController.reloadData()
+                            self.tableView.reloadData()
                         }
                     })
                 }
@@ -68,10 +74,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let index = specialities.specialityArray[indexPath.row]
-//        print(index.speciality_id)
-//        print(index.speciality_code)
-//        print(index.speciality_name)
+        //
     }
     
     @IBAction func createNewSpeciality(_ sender: Any) {

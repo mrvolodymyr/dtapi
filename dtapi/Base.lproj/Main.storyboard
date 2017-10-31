@@ -134,7 +134,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="tableViewController" destination="6Wt-6S-bsI" id="K8N-1l-Te0"/>
+                        <outlet property="tableView" destination="6Wt-6S-bsI" id="Zzj-1h-QR3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzx-VH-NVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
